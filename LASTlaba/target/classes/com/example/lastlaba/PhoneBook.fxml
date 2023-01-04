@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="480.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastlaba.Controller">
+    <children>
+        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="480.0" style="-fx-background-color: yellow;">
+            <children>
+            <AnchorPane prefHeight="58.0" prefWidth="8.0" />
+                <Text fill="#141401" strokeType="OUTSIDE" strokeWidth="0.0" text="Телефонный справочник">
+                    <font>
+                        <Font name="System Bold" size="23.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="480.0" spacing="5.0">
+            <children>
+                <TextField fx:id="searchSurname_field" prefHeight="25.0" prefWidth="200.0" promptText="Найти по фамилии" />
+                <TextField fx:id="searchPhone_field" prefHeight="25.0" prefWidth="200.0" promptText="Найти по номеру телефона" />
+            </children>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="53.0" prefWidth="480.0" spacing="5.0">
+            <Button fx:id="searchSurname_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Найти" />
+            <Button fx:id="cleanSearcher_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Очистить" />
+            <Button fx:id="searchPhone_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Найти" />
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="245.0" prefWidth="480.0">
+            <children>
+            <AnchorPane prefHeight="246.0" prefWidth="0.0" />
+                <TableView fx:id="table" prefHeight="214.0" prefWidth="462.0" style="-fx-background-color: grey;">
+                    <columns>
+                        <TableColumn fx:id="colSurname" prefWidth="244.79998171329498" text="Фамилия" />
+                        <TableColumn fx:id="colPhone" prefWidth="215.19996643066406" text="Номер телефона" />
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="64.0" prefWidth="480.0" spacing="5.0">
+            <children>
+                <TextField fx:id="surname_field" prefHeight="25.0" prefWidth="200.0" promptText="Фамилия" />
+                <TextField fx:id="phone_field" prefHeight="25.0" prefWidth="200.0" promptText="Номер телефона" />
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="33.0" prefWidth="480.0" spacing="5.0">
+            <children>
+                <Button fx:id="add_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Добавить" />
+                <Button fx:id="choose_btn" mnemonicParsing="false" text="Выбрать" />
+                <Button fx:id="edit_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Редактировать" />
+                <Button fx:id="delete_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                <Button fx:id="clean_button" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Очистить" />
+            </children>
+        </HBox>
+      <AnchorPane prefHeight="0.0" prefWidth="383.0" style="-fx-background-color: blue;" />
+    </children>
+</VBox>
